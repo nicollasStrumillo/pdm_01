@@ -1,7 +1,23 @@
 import Pedidos from "./Pedido";
 import Cartao from "./Cartao";
+import Feedback from "./feedback";
 
 const App = () => {
+  const textoOk = "Já chegou";
+  const textoNok = "Não chegou ainda";
+  const funcaoOK = () => {
+    alert("Obrigado pelo feedback")
+  }
+  const funcaoNok = () => {
+    alert("Verificaremos")
+  }
+
+  const componentefeedback = (<Feedback
+    textoOk={textoOk}
+    textoNok={textoNok}
+    funcaoOk={funcaoOK}
+    funcaoNok={funcaoNok}
+  />)
   return (
     <div className="container">
       <div className="row">
@@ -17,6 +33,7 @@ const App = () => {
               titulo="Livro" 
               descricao="Um livro bom..."
             />
+            {componentefeedback}
           </Cartao>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-3 ">
@@ -26,6 +43,7 @@ const App = () => {
               titulo="Bicicleta" 
               descricao="Uma bicicleta..."
             />
+            {componentefeedback}
           </Cartao>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-3 ">
@@ -35,6 +53,7 @@ const App = () => {
               titulo="Camera" 
               descricao="Camera 4k"
             />
+            {componentefeedback}
           </Cartao>
         </div>
         <div className="col-sm-12 col-md-6 col-xl-3 ">
@@ -44,6 +63,7 @@ const App = () => {
               titulo="Fones" 
               descricao="Fones de ouvido"
             />
+            {componentefeedback}
           </Cartao>
         </div>
       </div>
